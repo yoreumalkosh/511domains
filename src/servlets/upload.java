@@ -105,7 +105,7 @@ public class upload extends HttpServlet {
 				 * request.getSession().setAttribute("csrfPreventionSaltCache",
 				 * csrfPreventionSaltCache); }
 				 */
-
+			/*
 			int ivInLength = 16;
 			boolean ivInUseLetters = true;
 			boolean ivInUseNumbers = false;
@@ -125,7 +125,12 @@ public class upload extends HttpServlet {
 			boolean keyOutUseLetters = true;
 			boolean keyOutUseNumbers = false;
 			String keyOutNew = RandomStringUtils.random(keyOutLength, keyOutUseLetters, keyOutUseNumbers);
-
+			*/
+			String ivInNew = stuff.main.generateIV();
+			String keyInNew = stuff.main.generateKey();
+			String ivOutNew = stuff.main.generateIV();
+			String keyOutNew = stuff.main.generateKey();
+			
 			_sessions = csrfPreventionSaltCache.getIfPresent("sessions");
 			if (_sessions == null) {
 				_sessions = new ArrayList<>();

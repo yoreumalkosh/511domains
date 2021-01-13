@@ -7,11 +7,9 @@ var app = {
 	},
 	ivOutClue: function() {
 		return "IV_OUT_CLUE";
-		//return CryptoJS.MD5("ואהבת לרעך כמוך").toString().substring(0, 16);
 	},
 	keyOutClue: function() {
 		return "KEY_OUT_CLUE";
-		//return CryptoJS.MD5("תן חיוך הכל לטובה").toString().substring(0, 32);
 	},
 	encryptData: function(msg, _iv, _key) {
 		var iv = CryptoJS.enc.Utf8.parse(_iv);
